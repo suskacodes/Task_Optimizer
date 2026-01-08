@@ -48,7 +48,7 @@ def recommend_task(mood, workload):
     prediction = clf.predict([[mood_idx, workload]])
     return TASK_MAP[prediction[0]]
 
-def get_mood_quote(mood):
+def mood_quote(mood):
     quote_library = {
         0: [ 
             "Sometimes the most productive thing you can do is relax. – Mark Black",
@@ -79,7 +79,7 @@ def userinput(name, workload):
     
     # 1. Empathetic Boost
     print(f"\nMood detected: {current_mood.upper()}")
-    print(f"Inspirational quote: {get_mood_quote(current_mood)}")
+    print(f"Inspirational quote: {mood_quote(current_mood)}")
     
     recommendation = recommend_task(current_mood, workload)
     print(f"Recommended Task: {recommendation}")
@@ -106,3 +106,4 @@ if __name__ == "__main__":
         userinput(user_name, work_level)
     except ValueError:
         print("Please enter a valid number.")
+
