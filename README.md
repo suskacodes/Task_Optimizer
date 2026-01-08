@@ -8,6 +8,7 @@ Features:
 4. Historical mood tracking using csv
 5. Stress alerts to management/hr
 6. Added data privacy for users
+7. Team morale analysis using matplotlib (visualization)
 
 Setup
 1. Install dependencies: pip install -r requirements.txt  #attached in the repository folder
